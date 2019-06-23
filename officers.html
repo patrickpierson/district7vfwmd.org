@@ -10,7 +10,7 @@ permalink: /officers/
         <div class="row">
             <div class="col-md-12">
                 <div class="block">
-                    <h1>District Officers</h1>
+                    <h1>Post Officers</h1>
                 </div>
             </div>
         </div>
@@ -33,127 +33,18 @@ permalink: /officers/
           </div>
           <div class="portfolio-contant">
             <ul id="portfolio-contant-active">
-                <li class="mix Command">
+              {% for officer in site.officers %}
+                <li class="mix {{ officer.filter }}">
                   <a href="#">
-                    <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
+                    <img src="{{ site.baseurl }}/img/officers/{{ officer.image }}" alt="">
                     <div class="overly">
                       <div class="position-center">
-                        <h2>Landon Becker</h2>
-                        <p>Commander</p>
+                        <h2>{{ officer.name }} - {{ officer.position }}</h2>
                       </div>
                     </div>
                   </a>
               </li>
-              <li class="mix Command">
-                <a href="#">
-                  <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                  <div class="overly">
-                    <div class="position-center">
-                      <h2>Test</h2>
-                      <p>Sr. Vice Commander</p>
-                    </div>
-                  </div>
-                </a>
-            </li>
-            <li class="mix Command">
-              <a href="#">
-                <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                <div class="overly">
-                  <div class="position-center">
-                    <h2>Test</h2>
-                    <p>Jr. Vice commander</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-              <li class="mix Operations">
-                <a href="#">
-                  <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                  <div class="overly">
-                    <div class="position-center">
-                      <h2>Test</h2>
-                      <p>Adjutant</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="mix Operations">
-                <a href="#">
-                  <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                  <div class="overly">
-                    <div class="position-center">
-                      <h2>Test</h2>
-                      <p>Quartermaster</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="mix Services">
-                <a href="#">
-                  <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                  <div class="overly">
-                    <div class="position-center">
-                      <h2>Test</h2>
-                      <p>Chaplain</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="mix Services">
-                <a href="#">
-                  <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                  <div class="overly">
-                    <div class="position-center">
-                      <h2>Test</h2>
-                      <p>Surgeon</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="mix Services">
-                <a href="#">
-                  <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                  <div class="overly">
-                    <div class="position-center">
-                      <h2>Test</h2>
-                      <p>Service Officer</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="mix Operations">
-                <a href="#">
-                  <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                  <div class="overly">
-                    <div class="position-center">
-                      <h2>Test</h2>
-                      <p>Judge Advocate</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="mix Trustees">
-                <a href="#">
-                  <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                  <div class="overly">
-                    <div class="position-center">
-                      <h2>Test</h2>
-                      <p>2nd Year Trustee</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="mix Trustees">
-                <a href="#">
-                  <img src="{{ site.baseurl }}/img/VFW_logo.jpg" alt="">
-                  <div class="overly">
-                    <div class="position-center">
-                      <h2>Test</h2>
-                      <p>3rd Year Trustee</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
