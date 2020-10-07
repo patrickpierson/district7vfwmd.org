@@ -10,7 +10,7 @@ permalink: /officers/
         <div class="row">
             <div class="col-md-12">
                 <div class="block">
-                    <h1>District Officers</h1>
+                    <h1>Post Officers</h1>
                 </div>
             </div>
         </div>
@@ -33,18 +33,27 @@ permalink: /officers/
           </div>
           <div class="portfolio-contant">
             <ul id="portfolio-contant-active">
-                <li class="mix Command">
+              {% for officer in site.officers %}
+                <li class="mix {{ officer.filter }}">
                   <a href="#">
+<<<<<<< HEAD
                     <img src="{{ site.baseurl }}/img/VFW_Logo_hires.jpg" alt="">
                     <div class="overly">
                       <div class="position-center">
                         <h2>Landon Becker</h2>
                         <p>District Commander</p>
                         <p>Post 10076</p>
+=======
+                    <img src="{{ site.baseurl }}/img/officers/{{ officer.image }}" alt="">
+                    <div class="overly">
+                      <div class="position-center">
+                        <h2>{{ officer.name }} - {{ officer.position }}</h2>
+>>>>>>> 717dbed15faccd3b820e3d609be39e5fb60cadde
                       </div>
                     </div>
                   </a>
               </li>
+<<<<<<< HEAD
               <li class="mix Command">
                 <a href="#">
                   <img src="{{ site.baseurl }}/img/VFW_Logo_hires.jpg" alt="">
@@ -296,6 +305,9 @@ permalink: /officers/
                   </div>
                 </a>
               </li>
+=======
+              {% endfor %}
+>>>>>>> 717dbed15faccd3b820e3d609be39e5fb60cadde
             </ul>
           </div>
         </div>
