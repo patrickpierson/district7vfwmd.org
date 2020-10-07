@@ -117,7 +117,7 @@ logo: "/assets/logo.png"
 markdown: kramdown
 
 # Google analytics
-ga_tracking_id: "UA-92630193-1"
+ga_tracking_id: "UA-141660455-1"
 
 google:
   tag_manager:
